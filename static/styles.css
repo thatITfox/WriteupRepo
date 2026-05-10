@@ -1,4 +1,7 @@
-/* Global CSS file */
+/* FONTS */
+@import url("https://fonts.cdnfonts.com/css/vcr-osd-mono");
+
+/* Global CSS file */   
 
 html {
     width: 100%;
@@ -9,10 +12,111 @@ body {
     margin: 0px;
 }
 
-/* index css */
+#header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+}
 
+#header a {
+    color: white;
+    font-family: VCR OSD mono;
+}
+
+/* index css */
+#main-content {
+    margin-top: 40px;
+    padding-left: 7%;
+    padding-right: 7%;
+    font-family: VCR OSD mono;
+    text-align: center;
+    color: white;
+}
+
+#rsec-logo {
+    width: 250px;
+}
 
 /* structure css */
+#folder-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 10px;
+}
 
+#back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#back-button a {
+    color: white;
+    font-family: VCR OSD mono;
+}
+
+#folder-content #folders, #folder-content #files {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 10px;
+}
+
+.folder-block, .file-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(107, 114, 128);;
+    border-radius: 15px;
+}
+
+.folder-block a, .file-block a {
+    color: white;
+    font-family: VCR OSD mono;
+    text-decoration: none;
+}
+
+/* markdown css */
+#markdown-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7%;
+    padding-right: 7%;
+    color: white;
+    font-family: Libre Franklin, sans-serif;;
+}
+
+#markdown-content a {
+    color: rgb(165 243 252);
+    /* text-decoration: none; */
+}
+
+#markdown-content :is(h1, h2, h3, h4, h5, h6) {
+    font-family: VCR OSD mono;
+}
 
 /* error css */
+
+#error-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: VCR OSD mono;
+    margin-top: 40px;
+}

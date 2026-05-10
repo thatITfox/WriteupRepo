@@ -3,25 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Something</title>
+    <title>Writeup Repo</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <div id="folders">
-        {% for folder in folders %}
-            <a href="{{folder}}/">
-                <p>{{folder}}</p>
-            </a>
-            <br>
-        {% endfor %}
+    <div id="header">
+        <a href="/">&lt Writeup Repo Home &gt</a>
+        <a href="/writeups/">&lt Writeup's Collection &gt</a>
     </div>
-    <div id="files">
-        {% for file in files %}
-            <a href="{{file}}">
-                <p>{{file}}</p>
-            </a>
-            <br>
+    <div id="folder-content">
+        <div id="back-button">
+            <a href="../">&lt;&lt; Back</a>
+        </div>
+        <div id="folders">
+        {% for folder in folders %}
+            <div class="folder-block">
+                <a href="{{folder}}/">
+                    <p>{{folder}}</p>
+                </a>
+            </div>
         {% endfor %}
+        </div>
+
+        <div id="files">
+            {% for file in files %}
+                <div class="file-block">
+                    <a href="{{file}}">
+                        <p>{{file}}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>
