@@ -15,6 +15,9 @@
         <div id="back-button">
             <a href="../">&lt;&lt; Back</a>
         </div>
+
+        {% if folders|length > 0 %}
+        <h2>Folders</h2>
         <div id="folders">
         {% for folder in folders %}
             <div class="folder-block">
@@ -24,7 +27,10 @@
             </div>
         {% endfor %}
         </div>
+        {% endif %}
 
+        {% if files|length > 0 %}
+        <h2>Files</h2>
         <div id="files">
             {% for file in files %}
                 <div class="file-block">
@@ -34,6 +40,8 @@
                 </div>
             {% endfor %}
         </div>
+        {% endif %}
+
     </div>
 </body>
 </html>

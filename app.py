@@ -43,7 +43,7 @@ def routepath(subpath):
     # complex or dumbass logic here
     safe_subpath = sanitize_filename(subpath)
     real_path = os.path.join("writeups", safe_subpath)
-    print(real_path)
+
     if not os.path.exists(real_path):
         return render_template("error.html", error="Path doesnt exist"), 404
 
