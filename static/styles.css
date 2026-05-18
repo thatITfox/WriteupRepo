@@ -13,17 +13,31 @@ body {
 }
 
 #header {
-    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10%;
+    color: white;
+    font-family: VCR OSD mono;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    margin-top: 10px;
     width: 100%;
+    gap: 10%;
+}
+
+#header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #header a {
     color: white;
-    font-family: VCR OSD mono;
+    text-align: center;
+    /* width: auto; */
+    max-width: 80%;
+    height: auto;
 }
 
 /* index css */
