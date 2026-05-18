@@ -14,7 +14,7 @@ def sanitize_filename(filename: str):
 
 # markdown renderer
 def renderarticle(filepath) -> str:
-    with open(filepath, "r") as f:
+    with open(filepath, "r", encoding='utf-8') as f:
         articlemarkdown = f.read()
     html = markdown.markdown(articlemarkdown, extensions=["extra"])
     return html
