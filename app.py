@@ -56,6 +56,9 @@ def routepath(subpath):
             item_path = os.path.join(real_path, item)
             if os.path.isdir(item_path): folders.append(item)
             else: files.append(item)
+        
+        files.sort()
+        folders.sort()
 
         return render_template("structure.html", files=files, folders=folders)
     
