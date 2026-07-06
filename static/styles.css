@@ -94,6 +94,10 @@ body {
     font-family: VCR OSD mono;
 }
 
+#folder-content {
+    padding-bottom: 70px;
+}
+
 #folder-content #folders, #folder-content #files {
     display: grid;
     width: 100%;
@@ -108,6 +112,7 @@ body {
     justify-content: center;
     background-color: rgb(107, 114, 128);;
     border-radius: 15px;
+    padding: 5px;
 }
 
 .folder-block a, .file-block a {
@@ -140,6 +145,22 @@ body {
     font-family: VCR OSD mono;
 }
 
+#markdown-content is(table, th, td) {
+    text-align: center;
+    border: solid #e5e7eb;
+    border-collapse: collapse;
+    border-width: 1px;
+    padding: 5px;
+}
+
+#markdown-content th {
+    background-color: #0284c7;
+}
+
+#markdown-content td {
+    background-color: #075985;
+}
+
 /* error css */
 
 #error-content {
@@ -151,4 +172,14 @@ body {
     color: white;
     font-family: VCR OSD mono;
     margin-top: 40px;
+}
+
+/* for when the screen change */
+@media (orientation: portrait) {
+    #folder-content #folders, #folder-content #files {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 10px 10px;
+    }
 }
