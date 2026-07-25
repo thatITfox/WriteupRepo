@@ -2,7 +2,7 @@ services:
   maxbloglite:
     build: .
     ports:
-      - "8001:80"
+      - "8001:5000"
     restart: unless-stopped
     volumes:
       - ./writeups:/usr/local/app/writeups
