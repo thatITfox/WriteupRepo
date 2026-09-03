@@ -1,8 +1,8 @@
 services:
-  maxbloglite:
+  writeuprepo:
     build: .
     ports:
       - "8001:5000"
     restart: unless-stopped
     volumes:
-      - ./writeups:/usr/local/app/writeups
+      - ${CONTENT_FOLDER}./writeups:/usr/local/app/writeups
